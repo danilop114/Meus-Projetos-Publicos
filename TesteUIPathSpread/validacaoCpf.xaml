@@ -1,0 +1,305 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="validacaoCpf" this:validacaoCpf.dirMicrosofEdge="C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" this:validacaoCpf.urlValidacaoCpf="https://validadordecpf.clevert.com.br/v-cpf.php" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ueabf="clr-namespace:UiPath.Excel.Activities.Business.Filter;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="dirMicrosofEdge" Type="InArgument(x:String)" />
+    <x:Property Name="urlValidacaoCpf" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1176,3192.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>validacaoCpf_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="106">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.Excel.Activities.Business.Filter</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="40">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="1186.4,3128" sap2010:WorkflowViewState.IdRef="Sequence_14">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="1144.8,3035.2" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence sap:VirtualizedContainerService.HintSize="1111.2,2948.8" sap2010:WorkflowViewState.IdRef="Sequence_27">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="1069.6,2856" sap2010:WorkflowViewState.IdRef="Sequence_18">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="1028,2763.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="Entrada_Dados.xlsx">
+                <ueab:ExcelApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="994.4,2493.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="952.8,1800.8" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_3" Range="[Excel.Sheet(&quot;Dados&quot;)]" SaveAfterEachRow="False">
+                        <ueab:ExcelForEachRowX.Body>
+                          <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                            <ActivityAction.Argument1>
+                              <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                            </ActivityAction.Argument1>
+                            <ActivityAction.Argument2>
+                              <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                            </ActivityAction.Argument2>
+                            <Sequence sap:VirtualizedContainerService.HintSize="919.2,1616" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="877.6,1523.2" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Edge: Nova guia" sap:VirtualizedContainerService.HintSize="836,1430.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="45ce13c3-cd5c-401f-9cb8-93823e1b25ec" Version="V2">
+                                  <uix:NApplicationCard.Body>
+                                    <ActivityAction x:TypeArguments="x:Object">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="802.4,1213.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                        <Sequence.Variables>
+                                          <Variable x:TypeArguments="x:Boolean" Name="numCpf">
+                                            <Variable.Default>
+                                              <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="numCpf = CurrentRow.Item(&quot;CPF&quot;)" />
+                                            </Variable.Default>
+                                          </Variable>
+                                          <Variable x:TypeArguments="x:String" Name="getTxtResultado" />
+                                        </Sequence.Variables>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="760.8,82.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_4" Url="[urlValidacaoCpf]" Version="V1" />
+                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Validar CPF'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="760.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="45ce13c3-cd5c-401f-9cb8-93823e1b25ec" Text="[CurrentRow.Item(&quot;CPF&quot;)]" Version="V1">
+                                          <uix:NTypeInto.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://validadordecpf.clevert.com.br/v-cpf.php" DesignTimeRectangle="367, 329, 250, 38" ElementType="InputBox" FriendlyName="'INPUT cpf'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='' class='form-control' aaname='' /&gt;" Guid="5722800f-4be5-44fc-94ab-c39cafd1a974" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAP4AAAAqCAYAAACTOeZoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGfSURBVHhe7d27buJQGIXRef9ng4qBiZQmSgoYjYAGxJ0z2ihBJMAD2P9a0u5M+Rnbzfl13H40M6s14ZsVnPDNCu4u/H9/X9vLn1EbDodtMBiYWUeXhtNymv7Z+bfw398mbTwetel02haLRVsul2bW0aXhtJym0/Zt69fwc1fIBfnBarVqm82mbbfbttvtzKxjS7tpOC2n6bR9+89/DT+PBLPZ7HLx8Xhs5/PZzDq+tJybQNpO43fh530gd4fT6dSA/kjT6/X60vhd+PkYkEeE3CWA/kjT+/3+0vjD8A+Hw+elQJ+k7afh530A6J+0LXwoRvhQkPChIOFDQcKHgoQPBQkfChI+FCR8KEj4UJDwoSDhQ0HCh4KEDwUJHwoSPhQkfChI+FCQ8KEg4UNBwoeChA8FCR8KEj4U9DT8nKuVY3aA/knbD8/Oy0ma8/n88zKgT9L2w9Nyc3b2ZPzb4z70TJqePDsfP3t/m1ziz0H6jsuGbkvDaTlNp+3b1r+Fn+WukEeCvA/kY4CZdXNpOC3f/tN/7S58M+v/hG9Wbh/tP73IqE5FYIZGAAAAAElFTkSuQmCC" InformativeScreenshot="181aaf462752cfcbae688025c2898451.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Validar CPF | Clevert' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                              <uix:TargetAnchorable.Anchors>
+                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                  <uix:Target DesignTimeRectangle="367, 182, 986, 25" ElementType="Text" FriendlyName="'Validar CPF'" FullSelectorArgument="&lt;webctrl tag='H3' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H3' type='' class='panel-title' aaname='Validar CPF' check:innerText='Validar CPF' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                                </scg:List>
+                                              </uix:TargetAnchorable.Anchors>
+                                            </uix:TargetAnchorable>
+                                          </uix:NTypeInto.Target>
+                                        </uix:NTypeInto>
+                                        <uix:NGetText DisplayName="Get Text 'O CPF'" sap:VirtualizedContainerService.HintSize="760.8,157.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="45ce13c3-cd5c-401f-9cb8-93823e1b25ec" Version="V1">
+                                          <uix:NGetText.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://validadordecpf.clevert.com.br/v-cpf.php" DesignTimeRectangle="367, 370, 986, 65" FriendlyName="'O CPF'" FullSelectorArgument="&lt;webctrl id='resposta1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='resposta1' tag='DIV' type='' class='alert alert-success response' aaname='O CPF  é válido.' /&gt;" Guid="dbbfb5c9-c788-447f-9978-7e8ae272bbbb" InformativeScreenshot="305c85171abc9dde560fec5e267845eb.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Validar CPF | Clevert' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                                          </uix:NGetText.Target>
+                                          <uix:NGetText.Text>
+                                            <OutArgument x:TypeArguments="x:String">[getTxtResultado]</OutArgument>
+                                          </uix:NGetText.Text>
+                                        </uix:NGetText>
+                                        <If Condition="[getTxtResultado = &quot;O CPF é inválido&quot;]" sap:VirtualizedContainerService.HintSize="760.8,540.8" sap2010:WorkflowViewState.IdRef="If_3">
+                                          <If.Then>
+                                            <Sequence sap:VirtualizedContainerService.HintSize="475.2,380" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ueab:FindReplaceValueX FoundAt="{x:Null}" DisplayName="Find/Replace Value" sap:VirtualizedContainerService.HintSize="433.6,285.6" sap2010:WorkflowViewState.IdRef="FindReplaceValueX_1" LookIn="Values" Operation="Replace" ReplaceWith="[getTxtResultado]" ValueToFind="[CurrentRow.Item(&quot;CPF&quot;)]" WhereToSearch="[Excel.Sheet(&quot;Dados&quot;).Range(&quot;A:A&quot;)]" />
+                                            </Sequence>
+                                          </If.Then>
+                                          <If.Else>
+                                            <Sequence sap:VirtualizedContainerService.HintSize="241.6,116.8" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:Continue sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Continue_2" />
+                                            </Sequence>
+                                          </If.Else>
+                                        </If>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </uix:NApplicationCard.Body>
+                                  <uix:NApplicationCard.TargetApp>
+                                    <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAAQhJREFUWEftl9ENwjAMRDsCIzAKm8AGsAGMwEaMwgiMQP0qTkKy09YkfCDypJNKnFzckLTu0AnYmW6mh+nZUHjuTbOcTdHglmKOkINJnS6mjSlCfTLgdTJpLKvsYIkI0nGOTxIQ3Bhjmcsh49Kdi5oE8GYs+8ux1libczv9ylOcZ20CWsZaOYqBgKup9pg6ioHG9AR6Ar+XAG8wjtz9dS2y7SKdAEaKYSyy7UIxRymAiWKYi2y7UMxRCvCaxghjrkW2XaQTaE1PoCdQnEfHZ6kkq0ElWZiAilIqnm9xNDFHWJRSKis7KuOWK4HX+zdH9IieaFXvzWlxhXl66e9oJfYXnuEHyT8zDCPMjw3PbnWtNQAAAABJRU5ErkJggg==" InformativeScreenshot="04f974dd1f3bab76e1c6e42d5a047586.png" Selector="&lt;html app='msedge.exe' title='Nova guia' /&gt;" Url="edge://newtab/" />
+                                  </uix:NApplicationCard.TargetApp>
+                                </uix:NApplicationCard>
+                              </Sequence>
+                            </Sequence>
+                          </ActivityAction>
+                        </ueab:ExcelForEachRowX.Body>
+                      </ueab:ExcelForEachRowX>
+                      <ueab:FilterX ClearFilter="False" ColumnName="CPF" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="952.8,170.4" sap2010:WorkflowViewState.IdRef="FilterX_1" Range="[Excel.Sheet(&quot;Dados&quot;)]">
+                        <ueab:FilterX.FilterArgument>
+                          <ueabf:FilterArgument Mode="Basic">
+                            <ueabf:FilterArgument.AdvancedFiltersArgument>
+                              <ueabf:AdvancedFilterArgument LogicalOperator="And">
+                                <ueabf:AdvancedFilterArgument.Condition1>
+                                  <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                </ueabf:AdvancedFilterArgument.Condition1>
+                                <ueabf:AdvancedFilterArgument.Condition2>
+                                  <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                </ueabf:AdvancedFilterArgument.Condition2>
+                              </ueabf:AdvancedFilterArgument>
+                            </ueabf:FilterArgument.AdvancedFiltersArgument>
+                            <ueabf:FilterArgument.BasicFiltersArgument>
+                              <ueabf:BasicFilterArgument>
+                                <ueabf:BasicFilterArgument.BasicFilters>
+                                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                                    <InArgument x:TypeArguments="x:String">O CPF é inválido</InArgument>
+                                  </scg:List>
+                                </ueabf:BasicFilterArgument.BasicFilters>
+                              </ueabf:BasicFilterArgument>
+                            </ueabf:FilterArgument.BasicFiltersArgument>
+                          </ueabf:FilterArgument>
+                        </ueab:FilterX.FilterArgument>
+                      </ueab:FilterX>
+                      <ueab:DeleteRowsX RowPositions="{x:Null}" DeleteRowsOption="Visible" DisplayName="Delete Rows" HasHeaders="True" sap:VirtualizedContainerService.HintSize="952.8,139.2" sap2010:WorkflowViewState.IdRef="DeleteRowsX_1" Range="[Excel.Sheet(&quot;Dados&quot;)]" />
+                      <ueab:FilterX ColumnName="{x:Null}" ClearFilter="True" DisplayName="Filter" HasHeaders="True" sap:VirtualizedContainerService.HintSize="952.8,170.4" sap2010:WorkflowViewState.IdRef="FilterX_2" Range="[Excel.Sheet(&quot;Dados&quot;)]">
+                        <ueab:FilterX.FilterArgument>
+                          <ueabf:FilterArgument Mode="Basic">
+                            <ueabf:FilterArgument.AdvancedFiltersArgument>
+                              <ueabf:AdvancedFilterArgument LogicalOperator="And">
+                                <ueabf:AdvancedFilterArgument.Condition1>
+                                  <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                </ueabf:AdvancedFilterArgument.Condition1>
+                                <ueabf:AdvancedFilterArgument.Condition2>
+                                  <ueabf:AdvancedFilterCondition Value="{x:Null}" Operator="NONE" />
+                                </ueabf:AdvancedFilterArgument.Condition2>
+                              </ueabf:AdvancedFilterArgument>
+                            </ueabf:FilterArgument.AdvancedFiltersArgument>
+                            <ueabf:FilterArgument.BasicFiltersArgument>
+                              <ueabf:BasicFilterArgument>
+                                <ueabf:BasicFilterArgument.BasicFilters>
+                                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                                    <InArgument x:TypeArguments="x:String">O CPF é inválido</InArgument>
+                                  </scg:List>
+                                </ueabf:BasicFilterArgument.BasicFilters>
+                              </ueabf:BasicFilterArgument>
+                            </ueabf:FilterArgument.BasicFiltersArgument>
+                          </ueabf:FilterArgument>
+                        </ueab:FilterX.FilterArgument>
+                      </ueab:FilterX>
+                    </Sequence>
+                  </ActivityAction>
+                </ueab:ExcelApplicationCard.Body>
+              </ueab:ExcelApplicationCard>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+    </ueab:ExcelProcessScopeX>
+  </Sequence>
+</Activity>
